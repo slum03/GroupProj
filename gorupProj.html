@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics: let, const, and Operators</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .example {
+            background-color: #e8f5e9;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Basics: <code>let</code>, <code>const</code>, and Operators</h1>
+        
+        <h2>1. <code>let</code></h2>
+        <p><code>let</code> is used to declare a variable that you might want to change later. It only exists inside the block of code (enclosed by curly braces <code>{}</code>) where you create it.</p>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>let favoriteColor = "blue";<br>
+            favoriteColor = "green";  // You can change it to "green"</code>
+        </div>
+
+        <h2>2. <code>const</code></h2>
+        <p><code>const</code> is used to declare a variable that you don't want to change. It also only exists inside the block of code where you create it. Once a value is assigned, it cannot be reassigned, but you can still modify the contents if it’s an object or an array.</p>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>const birthYear = 2004;<br>
+// birthYear = 2005;  // This would cause an error, because you can’t change it<br><br>
+
+const fruits = ["Apple", "Banana"];<br>
+fruits.push("Orange");  // You can still add items to the list</code>
+        </div>
+
+        <h2>3. Operators</h2>
+        <p>Operators are symbols that let you do things with variables, like math or comparisons.</p>
+
+        <h3>Arithmetic Operators</h3>
+        <p>These are for doing math:</p>
+        <ul>
+            <li><code>+</code> : Adds things together.</li>
+            <li><code>-</code> : Subtracts one thing from another.</li>
+            <li><code>*</code> : Multiplies things.</li>
+            <li><code>/</code> : Divides one thing by another.</li>
+            <li><code>%</code> : Gives you the remainder after dividing two numbers.</li>
+        </ul>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>let total = 10 + 5;  // 15<br>
+let remainder = 10 % 3;  // 1 (because 10 divided by 3 leaves a remainder of 1)</code>
+        </div>
+
+        <h3>Assignment Operators</h3>
+        <p>These are for putting values into variables:</p>
+        <ul>
+            <li><code>=</code> : Puts a value into a variable.</li>
+            <li><code>+=</code> : Adds something to what’s already in the variable.</li>
+            <li><code>-=</code> : Subtracts something from what’s already in the variable.</li>
+        </ul>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>let score = 0;<br>
+score += 10;  // Now score is 10 (it added 10 to the original 0)</code>
+        </div>
+
+        <h3>Comparison Operators</h3>
+        <p>These are for comparing things to see if they’re equal, greater, less, etc.:</p>
+        <ul>
+            <li><code>==</code> : Checks if the values are the same (ignores type).</li>
+            <li><code>===</code> : Checks if the values and types are the same (more strict).</li>
+            <li><code>!=</code> : Checks if values are different.</li>
+            <li><code>!==</code> : Checks if values or types are different.</li>
+            <li><code>&gt;</code> : Greater than.</li>
+            <li><code>&lt;</code> : Less than.</li>
+        </ul>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>console.log(5 == "5");  // true (compares values only)<br>
+console.log(5 === "5");  // false (compares values and types)</code>
+        </div>
+
+        <h3>Logical Operators</h3>
+        <p>These are for combining or reversing conditions:</p>
+        <ul>
+            <li><code>&&</code> : AND (both things must be true).</li>
+            <li><code>||</code> : OR (at least one thing must be true).</li>
+            <li><code>!</code> : NOT (reverses the condition).</li>
+        </ul>
+        <div class="example">
+            <p><strong>Example:</strong></p>
+            <code>let isSunny = true;<br>
+let isWeekend = false;<br><br>
+
+console.log(isSunny && isWeekend);  // false (both need to be true)<br>
+console.log(isSunny || isWeekend);  // true (at least one is true)<br>
+console.log(!isSunny);  // false (because it was true, and `!` makes it false)</code>
+        </div>
+    </div>
+</body>
+</html>
